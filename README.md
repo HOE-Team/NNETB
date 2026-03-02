@@ -1,4 +1,5 @@
-<h1 align="center">万物妥工具箱</h1>
+<h1 align="center">NNETB's Not Everything Toolbox</h1>
+<h1 align="center">非万！</h1>
 
 <div align="center">
     <img width="150" src="images/logo.png" alt="项目Logo">
@@ -55,7 +56,7 @@
 
 ## 🚀 安装
 
-1. 从本项目的 [Releases](https://github.com/HOE-Team/Everything-Fine-Toolbox/releases) 页面下载最新的 MSI 安装程序
+1. 从本项目的 [Releases](https://github.com/HOE-Team/NNETB/releases) 页面下载最新的 MSI 安装程序
 2. 运行 MSI 安装程序
 3. 按照安装向导指引完成安装
 4. 开始使用
@@ -67,7 +68,7 @@
 
 如果你希望将工具箱随身携带：
 
-1. 从 [Releases](https://github.com/HOE-Team/Everything-Fine-Toolbox/releases) 页面下载文件名带有 `-portable` 的版本
+1. 从 [Releases](https://github.com/HOE-Team/NNETB/releases) 页面下载文件名带有 `-portable` 的版本
 2. 使用解压软件解压到你的 USB 设备或其他便携存储介质
 3. 随时随地运行使用
 
@@ -86,8 +87,8 @@
 
 1. **克隆仓库**
    ```bash
-   git clone https://github.com/HOE-Team/Everything-Fine-Toolbox.git
-   cd Everything-Fine-Toolbox
+   git clone https://github.com/HOE-Team/NNETB.git
+   cd NNETB
    ```
 
 2. **编译项目**
@@ -107,7 +108,7 @@
    
    生成的 MSI 文件位于：
    ```
-   build/compose/binaries/main/msi/EverythingFineToolbox-1.0.0.msi
+   build/compose/binaries/main/msi/NNETB-1.0.0.msi
    ```
 
 ### 常见问题
@@ -203,8 +204,6 @@ project/
 ## 🌟 Star历史
 
 如果你觉得本实验对你的项目开发有启发，欢迎给个 Star 支持！
-
-[![Star History Chart](https://api.star-history.com/svg?repos=HOE-Team/Everything-Fine-Toolbox&type=Date)](https://star-history.com/#HOE-Team/Everything-Fine-Toolbox&Date)
 
 ## 📬 联系方式
 
