@@ -1,1 +1,1 @@
-rootProject.name = "Everything-Fine-Toolbox"
+rootProject.name = "NNETB"

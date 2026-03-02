@@ -32,7 +32,7 @@ fun AboutScreen() {
         )
         Spacer(modifier = Modifier.height(8.dp))
         Text(
-            text = "万物妥工具箱",
+            text = "NNETB's Not Everything Toolbox",
             style = MaterialTheme.typography.headlineSmall,
             textAlign = TextAlign.Start,
             color = MaterialTheme.colorScheme.primary

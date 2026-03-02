@@ -18,7 +18,7 @@ import config.saveConfig
 import config.AppConfig
 
 @OptIn(ExperimentalMaterial3Api::class)
-fun main() = singleWindowApplication(title = "Everything Fine Toolbox") {
+fun main() = singleWindowApplication(title = "NNETB") {
     var selectedNavIndex by remember { mutableStateOf(0) }
     
     val topBarTitle = when (selectedNavIndex) {
