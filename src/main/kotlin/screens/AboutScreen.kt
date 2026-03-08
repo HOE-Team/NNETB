@@ -26,7 +26,7 @@ fun AboutScreen() {
     ) {
         // 标题
         Text(
-            text = "Everything Fine Toolbox",
+            text = "非万",
             style = MaterialTheme.typography.headlineLarge,
             textAlign = TextAlign.Start
         )

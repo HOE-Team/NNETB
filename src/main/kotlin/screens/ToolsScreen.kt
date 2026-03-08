@@ -29,7 +29,8 @@ fun ToolsScreen() {
         "驱动程序管理工具",
         "媒体工具",
         "文件工具",
-        "开发人员工具"
+        "开发人员工具",
+        "其它工具"
     )
 
     Column(modifier = Modifier.fillMaxSize()) {
@@ -52,6 +53,7 @@ fun ToolsScreen() {
                 2 -> MediaToolContent()
                 3 -> FileToolContent()
                 4 -> DeveloperToolContent()
+                5 -> OtherToolContent()
             }
         }
     }
@@ -87,7 +89,9 @@ fun MediaToolContent() {
 @Composable
 fun FileToolContent() {
     val tools = listOf(
-        ToolItem("FreeFileSync", "文件同步工具", "https://freefilesync.org/")
+        ToolItem("FreeFileSync", "文件同步工具", "https://freefilesync.org/"),
+        ToolItem("FileLight","磁盘占用查看器","https://apps.kde.org/zh-cn/filelight/"),
+
     )
     ToolCardGrid(tools)
 }
@@ -95,7 +99,17 @@ fun FileToolContent() {
 @Composable
 fun DeveloperToolContent() {
     val tools = listOf(
-        ToolItem("Resource Hacker", "资源编辑工具", "http://www.angusj.com/resourcehacker/")
+        ToolItem("Resource Hacker", "资源编辑工具", "http://www.angusj.com/resourcehacker/"),
+        ToolItem("Git","版本控制工具","https://git-scm.com/install/windows"),
+        ToolItem("Git LFS","Git大文件存储","https://git-lfs.com/")
+    )
+    ToolCardGrid(tools)
+}
+
+@Composable
+fun OtherToolContent() {
+    val tools = listOf(
+        ToolItem("Rufus", "镜像烧录工具", "https://rufus.ie/zh/"),
     )
     ToolCardGrid(tools)
 }

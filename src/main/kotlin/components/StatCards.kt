@@ -158,7 +158,7 @@ fun GPUStatCard(
     if (gpus.isEmpty()) return
     
     StatCard(
-        title = "显卡",
+        title = "已安装的GPU",
         modifier = modifier,
         content = {
             if (gpus.size == 1) {
