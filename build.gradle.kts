@@ -36,8 +36,8 @@ compose.desktop {
         nativeDistributions {
             // For Windows: generate both EXE and MSI
             targetFormats(TargetFormat.Exe, TargetFormat.Msi)
-            packageName = "EverythingFineToolbox"
-            packageVersion = "1.0.0"
+            packageName = "NNETBIsNotEverythingToolbox"
+            packageVersion = "1.1.0"
             
             // Windows installer: prefer system-wide (per-machine) install
             windows {

@@ -55,12 +55,12 @@ fun AboutScreen() {
         )
         Spacer(modifier = Modifier.height(12.dp))
         Text(
-            text = "分发渠道：BlueAlgae(Alpha)",
+            text = "分发渠道：Protostomia-RC(Beta-RC)",
             style = MaterialTheme.typography.bodyMedium
         )
         Spacer(modifier = Modifier.height(8.dp))
         Text(
-            text = "版本：Blue_Algae-v1.0.0",
+            text = "版本：Protostomia-v1.1.0-rc0",
             style = MaterialTheme.typography.bodyMedium
         )
 
