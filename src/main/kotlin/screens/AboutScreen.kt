@@ -60,7 +60,7 @@ fun AboutScreen() {
         )
         Spacer(modifier = Modifier.height(8.dp))
         Text(
-            text = "版本：Protostomia-v1.1.0-rc0",
+            text = "版本：Protostomia-v1.1.0-rc1",
             style = MaterialTheme.typography.bodyMedium
         )
 
