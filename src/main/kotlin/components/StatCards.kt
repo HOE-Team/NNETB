@@ -155,39 +155,32 @@ fun GPUStatCard(
     gpus: List<utils.GPUInfo>,
     modifier: Modifier = Modifier
 ) {
-    if (gpus.isEmpty()) return
-    
     StatCard(
         title = "已安装的GPU",
         modifier = modifier,
         content = {
-            if (gpus.size == 1) {
-                // Single GPU with circular progress indicator
+            if (gpus.isEmpty()) {
+                // No GPU installed
+                Text(
+                    text = "无GPU被安装或驱动程序未安装",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            } else if (gpus.size == 1) {
+                // Single GPU - show only model name
                 val gpu = gpus[0]
-                Row(
+                Column(
                     modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(12.dp),
-                    verticalAlignment = Alignment.CenterVertically
+                    verticalArrangement = Arrangement.spacedBy(4.dp)
                 ) {
-                    CircularProgressIndicator(
-                        progress = gpu.usage.toFloat(),
-                        modifier = Modifier.weight(0.3f)
+                    Text(
+                        text = gpu.model,
+                        style = MaterialTheme.typography.bodySmall,
+                        maxLines = 2
                     )
-                    Column(
-                        modifier = Modifier
-                            .weight(0.7f)
-                            .padding(start = 8.dp),
-                        verticalArrangement = Arrangement.spacedBy(4.dp)
-                    ) {
-                        Text(
-                            text = "型号: ${gpu.model}",
-                            style = MaterialTheme.typography.bodySmall,
-                            maxLines = 2
-                        )
-                    }
                 }
             } else {
-                // Multiple GPUs without progress indicators
+                // Multiple GPUs - show all model names
                 Column(
                     modifier = Modifier.fillMaxWidth(),
                     verticalArrangement = Arrangement.spacedBy(12.dp)

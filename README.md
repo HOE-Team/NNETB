@@ -5,7 +5,7 @@
     <img width="150" src="images/logo.png" alt="项目Logo">
 </div>
 
-<h4 align="center">一款简约高效、技术激进的实验性工具箱 · 对某闭源项目的嘲讽复刻</h4>
+<h4 align="center">一款简约高效、技术激进的实验性工具箱</h4>
 
 <div align="center">
 
@@ -21,8 +21,6 @@
 
 > [!IMPORTANT]
 > 这是一个**实验性项目**，采用激进的技术栈（KMP + CMP），构建不稳定且不会受到长期维护。我们强烈建议贡献者再三考虑是否参与，因为不保证项目的长期维护和稳定性。
->
-> **P.S.** 本项目为对某闭源工具箱的**嘲讽复刻**，不建议任何人将其作为生产力工具使用。
 
 ## 📑 目录
 
@@ -35,14 +33,12 @@
 - [🤝 如何贡献](#-如何贡献)
 - [📁 项目结构](#-项目结构)
 - [🔗 技术栈](#-技术栈)
-- [🌟 Star历史](#-star历史)
 - [📜 版权与许可证](#-版权与许可证)
 
 ## ✨ 特性
 
 * **现代UI**：采用 Material Design 3 设计风格
 * **技术激进**：使用 Kotlin + Compose Multiplatform 跨平台框架
-* **嘲讽复刻**：对某闭源工具箱的回应性项目
 * **代码透明**：完全开源，可供任何人审计
 
 ## 🖥️ 系统要求
@@ -82,6 +78,7 @@
 - Windows 10 1909 或更高版本
 - JDK 17 或更高版本
 - Git
+- Inno Setup 6（用于生成安装程序）
 
 ### 构建步骤
 
@@ -101,21 +98,66 @@
    .\gradlew.bat run
    ```
 
-4. **打包为 MSI 安装程序**
+4. **打包为安装程序**
    ```bash
-   .\gradlew.bat packageDistributionForCurrentOS
+   .\gradlew.bat packageApplication -PinnoPath="D:\Program Files (x86)\Inno Setup 6\ISCC.exe"
    ```
    
-   生成的 MSI 文件位于：
+   生成的安装程序文件位于：
    ```
-   build/compose/binaries/main/msi/NNETB-1.0.0.msi
+   build/compose/binaries/main/installer/
    ```
+   文件名为：`NNETBsNotEverythingToolbox-1.1.0-Setup.exe`
+
+### 高级构建选项
+
+#### 指定工具路径
+如果构建工具不在系统PATH中，可以通过参数指定路径：
+
+```bash
+# 指定Inno Setup编译器路径
+.\gradlew.bat packageApplication -PinnoPath="D:\Program Files (x86)\Inno Setup 6\ISCC.exe"
+
+# 指定rcedit路径（用于图标替换）
+.\gradlew.bat packageApplication -PrceditPath="C:\path\to\rcedit.exe"
+```
+
+#### 跳过特定任务
+```bash
+# 跳过图标替换任务（当rcedit未安装时）
+.\gradlew.bat packageApplication -x applyIconToExe
+
+# 仅生成可执行文件，不生成安装程序
+.\gradlew.bat packageDistributionForCurrentOS
+```
 
 ### 常见问题
 
-- 如果编译失败，请确保 JDK 版本为 17 或更高
-- 确保网络连接正常，Gradle 需要下载依赖包
-- MSI 生成过程可能需要几分钟，请耐心等待
+#### 构建失败：乱码错误信息
+**问题**：构建时出现类似"锟斤拷息: 锟斤拷锟结供锟斤拷模式锟睫凤拷锟揭碉拷锟侥硷拷锟斤拷"的错误
+**原因**：构建工具（Inno Setup或rcedit）未正确安装或不在PATH中
+**解决方案**：
+1. 安装Inno Setup 6并确保`ISCC.exe`在PATH中，或使用`-PinnoPath`参数指定路径
+2. 安装rcedit（可选，用于图标替换）或使用`-x applyIconToExe`跳过该任务
+
+#### 构建失败：工具未找到
+**问题**：`applyIconToExe`或`buildInstallerInnoSetup`任务失败
+**原因**：rcedit或Inno Setup编译器未安装
+**解决方案**：
+1. 安装Inno Setup 6（必需）：https://jrsoftware.org/isdl.php
+2. 安装rcedit（可选）：https://github.com/electron/rcedit/releases
+3. 或使用参数跳过相关任务
+
+#### 构建成功但无图标
+**问题**：生成的可执行文件没有自定义图标
+**原因**：rcedit未安装或任务被跳过
+**解决方案**：
+1. 安装rcedit并添加到PATH
+2. 或接受默认图标（Compose Desktop生成的图标）
+
+#### 构建时间过长
+**原因**：首次构建需要下载依赖包，Inno Setup编译需要时间
+**建议**：耐心等待，后续构建会更快
 
 </details>
 
@@ -125,7 +167,7 @@
 
 **但我们不建议你这么做。**
 
-本项目是实验性嘲讽复刻，技术栈激进（KMP + CMP），构建不稳定，且不保证长期维护。如果你提交 PR，可能不会被合并，也可能合进去了但项目明天就归档。
+本项目技术栈激进（KMP + CMP），构建不稳定，且不保证长期维护。如果你提交 PR，可能不会被合并，也可能合进去了但项目明天就归档。
 
 > [!NOTE]
 > 那为什么还要写 PR 指南？因为——万一真有开发者觉得这个项目值得认真做下去，甚至想把它变成一个正经工具箱，我们不能让人家摸黑进门。门开着，PR 指南写好了，但你进来之前，**请三思**。
@@ -185,6 +227,8 @@ git commit -m "fix: 修复已知问题"
 project/
 ├─ src/                  # Kotlin 源代码
 ├─ gradle/               # Gradle 配置
+├─ LICENSE               # 许可证
+├─ installer.iss         # Inno Setup Script
 ├─ build.gradle.kts      # 项目构建配置
 ├─ settings.gradle.kts   # Gradle 设置
 ├─ gradlew               # Gradle Wrapper (Linux/macOS)
@@ -224,4 +268,4 @@ project/
 
 > [!WARNING]
 > ### 著作权声明
-> NNETB 的徽标为 HOE Team 所有，受法律保护。未经明确书面授权，不得用于商业用途或进行修改后使用。  
+> NNETB 的徽标为 HOE Team 所有，受法律保护。未经明确书面授权，不得用于商业用途或进行修改后使用。

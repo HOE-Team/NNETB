@@ -26,7 +26,7 @@ import java.awt.Dimension
 fun main() = application {
     Window(
         onCloseRequest = ::exitApplication,
-        title = "NNETB",
+        title = "NNETB's Not Everything Toolbox",
         icon = painterResource("img/logo.png"),  // 注意：这里需要使用相对于 resources 的路径
         state = WindowState()
     ) {

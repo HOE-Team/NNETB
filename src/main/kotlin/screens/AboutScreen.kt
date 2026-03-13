@@ -75,7 +75,7 @@ fun AboutScreen() {
         )
         Spacer(modifier = Modifier.height(12.dp))
         Text(
-            text = "版权所有©2026 HOE Team。保留所有权利",
+            text = "版权所有 (C) 2026 HOE Team。 保留所有权利",
             style = MaterialTheme.typography.bodyMedium
         )
         Spacer(modifier = Modifier.height(8.dp))
