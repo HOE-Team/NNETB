@@ -55,12 +55,12 @@ fun AboutScreen() {
         )
         Spacer(modifier = Modifier.height(12.dp))
         Text(
-            text = "分发渠道：Protostomia-RC(Beta-RC)",
+            text = "分发渠道：Protostomia(Beta)",
             style = MaterialTheme.typography.bodyMedium
         )
         Spacer(modifier = Modifier.height(8.dp))
         Text(
-            text = "版本：Protostomia-v1.1.0-rc1",
+            text = "版本：Protostomia-v1.1.0",
             style = MaterialTheme.typography.bodyMedium
         )
 
