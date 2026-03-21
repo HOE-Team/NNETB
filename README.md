@@ -1,28 +1,11 @@
 <div align="center" class="logo-container">
    <img height="50" src="images/hoe-team.png" alt="HOE-Team徽标">
-   <span class="divider">|</span>
    <img height="50" src="images/PLAN_NO.png" alt="PLAN-NO徽标">
 </div>
 
 <div align="center" class="NPL text">
    <p>此项目属于 HOE Team PLAN NO 计划 <a href="#hoe-team-plan-no-计划">了解更多[↗]</a></p>
 </div>
-
-<style>
-.logo-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.divider {
-  font-size: 30px;
-  color: #FFF;
-  line-height: 1;
-  transform: translateY(-4px);  /* 向上微调，数值根据实际效果调整 */
-}
-</style>
 
 
 <h1 align="center">NNETB's Not Everything Toolbox</h1>
