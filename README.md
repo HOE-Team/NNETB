@@ -54,6 +54,9 @@
 ## 🖥️ 系统要求
 
 * **操作系统**：Windows 10 1909 或更高版本
+> [!NOTE]
+> Linux平台用户请访问[NNETB's Not Everything Toolbox Linux Fork](https://github.com/HOE-Team/NNETB-For-Linux) 仓库。
+
 > [!WARNING]
 > 本程序可能无法在 Windows 10 1909 以下版本正常运行，旧系统用户请酌情使用。
 
