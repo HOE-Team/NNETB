@@ -47,26 +47,28 @@ fun main() = application {
         AppTheme(darkTheme = isDark, seedHex = seedHex) {
             AppScaffold(
                 startBar = { NavRail(onSelection = { selectedNavIndex = it }) },
-                topBarTitle = topBarTitle
-            ) {
-                when (selectedNavIndex) {
-                    1 -> ToolsScreen()
-                    2 -> SettingsScreen(
-                        isDarkTheme = isDark,
-                        onThemeChange = { newDark ->
-                            isDark = newDark
-                            saveConfig(AppConfig(dark = isDark, color = seedHex))
-                        },
-                        selectedColor = seedHex ?: "",
-                        onColorChange = { hex ->
-                            seedHex = if (hex.isBlank()) null else hex
-                            saveConfig(AppConfig(dark = isDark, color = seedHex))
-                        }
-                    )
-                    3 -> AboutScreen()
-                    else -> HomeScreen()
-                }
-            }
+                topBarTitle = topBarTitle,
+                content = {
+                    when (selectedNavIndex) {
+                        1 -> ToolsScreen()
+                        2 -> SettingsScreen(
+                            isDarkTheme = isDark,
+                            onThemeChange = { newDark ->
+                                isDark = newDark
+                                saveConfig(AppConfig(dark = isDark, color = seedHex))
+                            },
+                            selectedColor = seedHex ?: "",
+                            onColorChange = { hex ->
+                                seedHex = if (hex.isBlank()) null else hex
+                                saveConfig(AppConfig(dark = isDark, color = seedHex))
+                            }
+                        )
+                        3 -> AboutScreen()
+                        else -> HomeScreen()
+                    }
+                },
+                testAprilFools = false
+            )
         }
     }
 }

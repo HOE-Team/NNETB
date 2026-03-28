@@ -19,7 +19,8 @@ import androidx.compose.ui.unit.dp
 fun AppScaffold(
     startBar: @Composable () -> Unit = {},
     topBarTitle: String = "概览",
-    content: @Composable () -> Unit = {}
+    content: @Composable () -> Unit = {},
+    testAprilFools: Boolean = false
 ) {
     MaterialTheme {
         Scaffold(
@@ -33,6 +34,8 @@ fun AppScaffold(
                 // Right side: TopBar at top, then content fills remaining space
                 Column(modifier = Modifier.fillMaxSize()) {
                     TopBar(title = topBarTitle)
+                    // 愚人节警告卡片（只在4月1日显示，测试模式可强制显示）
+                    AprilFoolsWarningCard(testMode = testAprilFools)
                     Box(modifier = Modifier.fillMaxSize().padding(8.dp)) {
                         content()
                     }
