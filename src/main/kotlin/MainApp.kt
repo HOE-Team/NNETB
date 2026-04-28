@@ -1,3 +1,10 @@
+/*
+ * SPDX-FileCopyrightText: ©2026 HOE Team
+ * SPDX-License-Identifier: MIT
+ *
+ * Project: NNETB
+ */
+
 package main.kotlin
 
 import androidx.compose.material3.ExperimentalMaterial3Api
