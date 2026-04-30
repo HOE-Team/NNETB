@@ -1,13 +1,3 @@
-<div align="center" class="logo-container">
-   <img height="50" src="images/hoe-team.png" alt="HOE-Team徽标">
-   <img height="50" src="images/PLAN_NO.png" alt="PLAN-NO徽标">
-</div>
-
-<div align="center" class="NPL text">
-   <p>此项目属于 HOE Team PLAN NO 计划 <a href="https://github.com/HOE-Team/.github/blob/main/profile/docs/INTRODUCE_PLAN_NO.md">了解更多[↗]</a></p>
-</div>
-
-
 <h1 align="center">NNETB's Not Everything Toolbox</h1>
 <h1 align="center">非万！</h1>
 
