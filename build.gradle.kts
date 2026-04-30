@@ -39,7 +39,7 @@ compose.desktop {
             // For Windows: generate EXE (MSI packaging replaced by Inno Setup)
             targetFormats(TargetFormat.Exe)
             packageName = "NNETBsNotEverythingToolbox"
-            packageVersion = "1.1.0"
+            packageVersion = "1.1.1"
             
             // Windows installer: prefer system-wide (per-machine) install
             windows {
