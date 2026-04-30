@@ -1,3 +1,10 @@
+/*
+ * SPDX-FileCopyrightText: ©2026 HOE Team
+ * SPDX-License-Identifier: MIT
+ *
+ * Project: NNETB
+ */
+
 package utils
 
 data class SystemOverview(

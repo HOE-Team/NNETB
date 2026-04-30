@@ -1,3 +1,10 @@
+/*
+ * SPDX-FileCopyrightText: ©2026 HOE Team
+ * SPDX-License-Identifier: MIT
+ *
+ * Project: NNETB
+ */
+
 package components
 
 import androidx.compose.material3.FloatingActionButton
