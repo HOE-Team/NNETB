@@ -30,7 +30,7 @@
 ## 📋 项目状态
 
 > [!IMPORTANT]
-> 这是一个**实验性项目**，采用激进的技术栈（Kotlin + CMP），现在已经进入**终结性**维护，将**不再**受理Pull Request和Feature Issue。
+> 这是一个**实验性项目**，采用激进的技术栈（Kotlin + CMP），现在已经进入**终结性**维护，将**不再**受理除严重Bug修复以外的Pull Request和Feature Issue。。
 
 ## 📑 目录
 
@@ -160,7 +160,7 @@
 
 ## 🤝 如何贡献
 > [!IMPORTANT]
-> ### 本项目不再受理新的Pull Request，如果发现了严重Bug，请创建一个Bug [Issue](https://github.com/HOE-Team/NNETB/issues).
+> ### 本项目不再受理新的新功能相关的 Pull Request，如果发现了严重Bug，请创建一个Bug [Issue](https://github.com/HOE-Team/NNETB/issues)或针对修复 Bug 的 Pull Request。.
 
 ## 📁 项目结构
 
